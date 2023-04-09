@@ -172,6 +172,54 @@ form [type="search"] {
   grid-template-columns: 1fr auto;
   grid-template-areas: "projects aside";
   padding: 1.5rem 1.5rem 1rem 1rem;
+  gap: 1.5rem;
+}
+
+/* **Main Content -- Projects** */
+.projects {
+  display: grid;
+  grid-template-rows: min-content auto;
+  gap: 1rem;
+}
+
+.projects > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  border-left: 8px solid goldenrod;
+  box-shadow: 5px 5px 5px #94a3b8;
+  padding: 1.5rem;
+  display: grid;
+}
+
+.card > .title {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card .actions {
+  margin-top: 1rem;
+  align-self: end;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: end;
+  gap: 1.5rem;
+}
+.actions img {
+  cursor: pointer;
+  height: 1.5rem;
 }
 
 /* **Main Content -- Aside** */
@@ -183,7 +231,7 @@ form [type="search"] {
 
 .announcements {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .announcements > .title {
   font-size: 20px;
@@ -215,6 +263,7 @@ form [type="search"] {
 }
 
 .post > .title {
+  cursor: pointer;
   font-weight: bold;
 }
 
@@ -229,7 +278,7 @@ form [type="search"] {
 
 .trending {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .trending > .title {
@@ -263,6 +312,7 @@ form [type="search"] {
 
 .trend .user {
   font-weight: bold;
+  cursor: pointer;
 }
 .user + span {
   color: #52525b;

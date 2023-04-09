@@ -14,7 +14,7 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: max-content 5fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "sidebar header"
@@ -24,6 +24,49 @@ body {
 .sidebar {
   grid-area: sidebar;
   background-color: #0ea5e9;
+  color: white;
+  font-weight: bold;
+  padding: 1.5rem;
+  padding-right: 6rem;
+  display: grid;
+  align-content: start;
+  gap: 3rem;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 3rem auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  filter: invert(1);
+}
+
+.logo span {
+  font-size: 2rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.sidebar ul a {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 3rem auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar ul img {
+  height: 1.5rem;
+  filter: invert(1);
+  justify-self: center;
 }
 
 .header {

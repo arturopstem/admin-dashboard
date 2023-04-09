@@ -14,13 +14,14 @@ body {
 
 body {
   display: grid;
-  grid-template-columns: max-content 5fr;
+  grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main-content";
 }
 
+/* **Sidebar** */
 .sidebar {
   grid-area: sidebar;
   background-color: #0ea5e9;
@@ -72,6 +73,94 @@ body {
 .header {
   grid-area: header;
   background-color: #fff;
+}
+
+/* **Header** */
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem 2rem;
+  padding: 0.5rem 2rem 1rem;
+  /* box-shadow: 10px 5px 0px red; */
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+form .search-button {
+  height: 1.5rem;
+}
+form [type="search"] {
+  appearance: none;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-family: inherit;
+}
+
+.bell-user {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: end;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+
+.bell-user .bell {
+  height: 1.5rem;
+}
+
+.bell-user .avatar {
+  height: 3rem;
+}
+
+.greeting {
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+
+.greeting img {
+  height: 5rem;
+}
+
+.greeting p {
+  display: grid;
+  font-size: 14px;
+  align-items: center;
+}
+
+.greeting .username {
+  font-size: 1.5rem;
+  align-self: start;
+}
+
+.buttons ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.buttons button {
+  appearance: none;
+  background-color: #0ea5e9;
+  color: #fff;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  width: calc(6ch + 2.5rem);
+  height: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 .main-content {

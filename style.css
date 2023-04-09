@@ -168,4 +168,102 @@ form [type="search"] {
 .main-content {
   grid-area: main-content;
   background-color: #cbd5e1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "projects aside";
+  padding: 1.5rem 1.5rem 1rem 1rem;
+}
+
+/* **Main Content -- Aside** */
+.main-content .aside {
+  display: grid;
+  align-content: start;
+  gap: 2.5rem;
+}
+
+.announcements {
+  display: grid;
+  gap: 0.5rem;
+}
+.announcements > .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.announcements .posts {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px #94a3b8;
+}
+
+.announcements .post {
+  width: 25ch;
+}
+
+.post:nth-child(1) {
+  padding-bottom: 1rem;
+}
+
+.post:nth-child(2) {
+  padding: 1rem 0;
+  border-top: 2px solid #94a3b8;
+  border-bottom: 2px solid #94a3b8;
+}
+
+.post:nth-child(3) {
+  padding-top: 1rem;
+}
+
+.post > .title {
+  font-weight: bold;
+}
+
+.post > .description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-size: 14px;
+  color: #52525b;
+}
+
+.trending {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.trending > .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.trending .trends {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px #94a3b8;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.trends .trend {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1rem;
+}
+
+.trend .avatar {
+  height: 3rem;
+}
+
+.trend p {
+  display: grid;
+  align-items: center;
+}
+
+.trend .user {
+  font-weight: bold;
+}
+.user + span {
+  color: #52525b;
 }
